@@ -1,0 +1,27 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-title>Heeramientas</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-grid>
+            <ion-row>
+                <ion-col col-4></ion-col>
+                <ion-col col-4>
+                    <img style="border-radius: 100%" src="../../assets/img/navaja-suiza.png">
+                </ion-col>
+                <ion-col col-4></ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-list>
+                    <button menuClose ion-item *ngFor="let p of paginas" (click)="irPagina(p)">
+                {{p.titulo}}
+            </button>
+                </ion-list>
+            </ion-row>
+        </ion-grid>
+
+    </ion-content>
+</ion-menu>
+<ion-nav id="nav" #content [root]="rootPage"></ion-nav>

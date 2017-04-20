@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>AlmacenarCoordenadas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="paginas">
+
+  <form (ngSubmit)="submit()">
+    <ion-item>
+      <ion-label>Latitud</ion-label>
+      <ion-input type="number" [(ngModel)]="todo.lat" name="Latitud"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Longitud</ion-label>
+      <ion-input type="number" [(ngModel)]="todo.lon" name="Longitud"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Guardar Coordenadas</button>
+  </form>
+
+
+
+  <ion-card>
+    <ion-card-header>
+      Variable
+    </ion-card-header>
+
+    <ion-card-content>
+      <b><pre>{{todo | json}}</pre></b>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

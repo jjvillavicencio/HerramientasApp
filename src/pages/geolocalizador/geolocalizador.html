@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="dark">
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
+    <ion-title>geolocalizador</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="paginas">
+
+ <form>
+    <ion-item>
+      <ion-label>Latitud</ion-label>
+      <ion-input type="number" disabled [(ngModel)]="locationTracker.lat" name="Latitud"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Longitud</ion-label>
+      <ion-input type="number" disabled [(ngModel)]="locationTracker.lng" name="Longitud"></ion-input>
+    </ion-item>
+  </form>
+
+  <button ion-button full primary (click)="start()">Start Tracking</button>
+  <button ion-button full primary (click)="stop()">Stop Tracking</button>
+
+</ion-content>
